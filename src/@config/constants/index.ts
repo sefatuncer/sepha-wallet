@@ -9,7 +9,7 @@ export const QR_SCANNER_TIMEOUT = {
 export const SPHEREON_UNIRESOLVER_RESOLVE_URL = 'https://uniresolver.test.sphereon.io/1.0/identifiers';
 export const DIF_UNIRESOLVER_RESOLVE_URL = 'https://dev.uniresolver.io/1.0/identifiers';
 
-export const APP_ID = 'sphereon:ssi-wallet';
+export const APP_ID = 'sepha:wallet';
 export const DID_PREFIX = 'did';
 
 export const CONTACT_ALIAS_MAX_LENGTH = 50;

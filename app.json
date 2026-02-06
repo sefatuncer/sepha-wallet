@@ -1,26 +1,26 @@
 {
   "expo": {
-    "name": "SphereonWallet",
-    "slug": "SphereonWallet",
-    "version": "0.8.0",
+    "name": "Sepha Wallet",
+    "slug": "sepha-wallet",
+    "version": "1.0.0",
     "orientation": "portrait",
     "entryPoint": "index.js",
-    "scheme": "com.sphereon.ssi.wallet",
+    "scheme": "com.sepha.wallet",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "jsEngine": "hermes",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.sphereon.ssi.wallet",
+      "bundleIdentifier": "com.sepha.wallet",
       "useFrameworks": "static",
-      "associatedDomains": ["applinks:sphereon.com"],
+      "associatedDomains": ["applinks:sefa.io"],
       "infoPlist": {
         "NSCameraUsageDescription": "Camera is used to scan QR codes for receiving and presenting credentials"
       }
     },
     "android": {
-      "package": "com.sphereon.ssi.wallet",
+      "package": "com.sepha.wallet",
       "intentFilters": [
         {
           "action": "VIEW",
@@ -28,8 +28,17 @@
           "data": [
             {
               "scheme": "https",
-              "host": "sphereon.com",
-              "pathPrefix": "/ssi-wallet"
+              "host": "sefa.io",
+              "pathPrefix": "/wallet"
+            },
+            {
+              "scheme": "openid-credential-offer"
+            },
+            {
+              "scheme": "openid-vc"
+            },
+            {
+              "scheme": "openid"
             }
           ],
           "category": ["BROWSABLE", "DEFAULT"]
@@ -38,12 +47,13 @@
     },
     "androidNavigationBar": {
       "barStyle": "light-content",
-      "backgroundColor": "#202537"
+      "backgroundColor": "#1a1a2e"
     },
     "extra": {
       "eas": {
-        "projectId": "76b1c6a4-d1d8-421e-8514-ee9db0b197b4"
-      }
+        "projectId": "sepha-wallet-project"
+      },
+      "apiBaseUrl": "http://localhost:3000"
     },
     "plugins": [
       "@animo-id/expo-ausweis-sdk",
